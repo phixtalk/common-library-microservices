@@ -17,6 +17,12 @@ declare global {
     }    
 }
 
+/*
+The purpose of this middleware is to set the currentUser
+parameter in the request object, which will be used by the 
+requireAuth middleware to validate authentication.
+The currentUser valus is gotten by decoding the jwt session object
+*/
 export const currentUser = (
     req: Request, 
     res: Response, 
